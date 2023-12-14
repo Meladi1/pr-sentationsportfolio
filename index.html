@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentation Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -12,30 +13,135 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body class="bodycontainer">
-    <!--HEADER & NAV--> 
+</head>
+
+<body>
     <header>
-        
-         <label class="hamburger-menu">
-            <input type="checkbox"/>
-        </label>
-        <aside class="sidebar">
-            <nav>
-                <div class="stroke">HOME</div>
-                <div class="stroke">MY WORKS</div>
-                <div class="stroke">ABOUT</div>
-                <div class="stroke">CONTACT</div>
-            </nav>
-        </aside>      
-        <!--<div class="headertext">
-            <img class="headimage" src="website_banner_border.png" alt="Diagonal Dark Header border">
-            <img class="headimage" src="website_banner.webp" alt="Header banner with 7 character art pieces on a row">
-            <h1>RANDOM NAME </h1>
-            <h2>A multimedia designer</h2>
-            <h2>About me</h2>
-        </div>-->
+        <div class="header-menu">
+            <input type="checkbox" class="toggle-menu">
+            <div class="hamburger"></div>
+            <div class="navigation">
+                <ul class="menu">
+                    <li><a href="#" id="home">HOME</a></li>
+                    <li><a href="works.html">MY WORKS</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png"
+                        alt="Sharp stylized butterfly logo with the initials S within an O as the body">
+                </a>
+            </div>
+            <div class="navigation">
+                <ul class="menu">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="banner">
+            <div class="banner-text">
+                <img class="logo2" src="images/logo.png"
+                    alt="Sharp stylized butterfly logo with the initials S within an O as the body">
+                <h1 class="title">SIMONE OUSTED</h1>
+                <h2>Multimedia Designer</h2>
+                <div class="button">
+                    <h3> <a href="about.html">ABOUT ME</a></h3>
+                </div>
+            </div>
+        </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main class="main">
+        <h1 class="main-headline">MY WORKS</h1>
+        <p>As a multimedia designer I focus on animations.</p>
+        <section class="card-section">
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="front">
+                        <h3>ANIMATICS</h3>
+                        <p class="card-text">Better your players' experience down the line with animatics</p>
+                    </div>
+                    <div class="back">
+                        <h3> <a href="works.html#animatics" class="card-button">VIEW</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="front2">
+                        <h3>ANIMATIONS</h3>
+                        <p class="card-text">Enchance your players' experience with animations</p>
+                    </div>
+                    <div class="back2">
+                        <h3> <a href="works.html#animations" class="card-button">VIEW</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="front3">
+                        <h3>CSS ANIMATIONS</h3>
+                        <p class="card-text">Liven up your players time with CCS animations</p>
+                    </div>
+                    <div class="back3">
+                        <h3><a href="works.html#cssanimations" class="card-button">VIEW</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="front4">
+                        <h3>ANIMATED EMOTES</h3>
+                        <p class="card-text">Upgrades your player communication experience with animations</p>
+                    </div>
+                    <div class="back4">
+                        <h3> <a href="works.html#emotes" class="card-button">VIEW</a></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="card-section">
+        </section>
+        <h1 class="main-headline2">MY PROGRAMS</h1>
+        <section class="program-section">
+            <img class="programs" src="images/Adobe_Photoshop_CC_icon.png" alt="Adobe Photoshop icon">
+            <img class="programs" src="images/Adobe_Illustrator_CC_icon.png" alt="Adobe Illustrator icon">
+            <img class="programs" src="images/Adobe_After_Effects_CC_icon.png" alt="Adobe After Effects icon">
+            <img class="programs" src="images/Clip_Studio_Paint_app_logo.png" alt="Clip Studio Paint icon">
+            <img class="programs" src="images/Visual_Studio_Code_1.35_icon.png" alt="Adobe photoshop icon">
+            <img class="programs" src="images/davinci_resolve_macos_bigsur_icon_190261.png" alt="Adobe photoshop icon">
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <img class="logo3" src="images/logo.png"
+                alt="Sharp stylized butterfly logo with the initials S within an O as the body">
+            <h1 class="footer-h1">SIMONE OUSTED</h1>
+        </div>
+        <div class="footer-text">
+            <p class="redline">SITE GUIDE</p>
+            <br>
+            <p><a href="#">Home</a></p>
+            <br>
+            <p><a href="works.html">My works</a></p>
+            <br>
+            <p><a href="about.html">About</a></p>
+            <br>
+            <p><a href="#contact">Contact</a></p>
+        </div>
+        <div class="footer-text">
+            <p class="redline" id="contact">CONTACT INFO</p>
+            <br>
+            <p>Email: Simoneousted@gmail.com</p>
+        </div>
+        <div class="footer-text">
+            <p class="redline">SOCIAL MEDIA</p>
+            <br>
+            <img class="socials" src="images/twitter_icon.png" alt="Twitter Icon">
+            <img class="socials" src="images/youtube_icon.png" alt="Youtube Icon">
+        </div>
+    </footer>
 </body>
+
 </html>

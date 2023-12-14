@@ -1,20 +1,91 @@
-*, *::after, ::before { 
+*,
+*::after,
+::before {
     box-sizing: border-box;
 }
+
 * {
     font-family: 'Raleway', sans-serif;
-    color: #EEEEF3; 
+    color: #EEEEF3;
     margin: 0;
 }
+
 body {
     background: #2B2B3B;
+
 }
-/*TEXT STUFF; H1-H3 */
+
+/*TEXT STUFF; H1-H3, Decoration, button */
 .title {
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 0.5rem;
+    display: flex;
     justify-content: center;
-    text-shadow: 0 0 5px #2B2B3B;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-headline {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.main-headline2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.headline3 {
+    padding-bottom: 20px;
+    display: block;
+
+}
+
+h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center
+}
+
+.button {
+    background: #F94547;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    font-size: 18px;
+    border-radius: 9999px;
+    height: 4rem;
+    width: 12rem;
+    margin-top: 60px;
+    padding: 5px;
+    padding-top: 18px;
+    margin-left: 36%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    height: 5rem;
+    width: 13rem;
+    font-size: 20px;
+    padding-top: 25px;
+}
+
+.redline {
+    border: solid 2px #F94547;
+    border-top-style: none;
+    border-bottom-style: solid;
+    border-right-style: none;
+    border-left-style: none;
 }
 
 /* IT'S EVERYTHING HEADER BABY WOO! */
@@ -29,24 +100,29 @@ body {
     padding: 20px;
     transition: 0.3s;
 }
+
 .logo {
     z-index: 3;
 }
+
 .logo2 {
     display: none;
 }
+
 .logo a {
     display: block;
     justify-content: center;
     align-items: center;
 }
+
 .logo a img {
     display: block;
     width: 200px;
     justify-content: center;
 }
+
 .navigation {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -70,6 +146,7 @@ body {
     list-style-type: none;
 
 }
+
 .menu li a {
     text-decoration: none;
     display: block;
@@ -95,7 +172,9 @@ li a:hover {
     z-index: 3;
     transition: 0.3s;
 }
-.hamburger::before, .hamburger::after {
+
+.hamburger::before,
+.hamburger::after {
     content: "";
     position: absolute;
     height: 8px;
@@ -109,10 +188,12 @@ li a:hover {
     top: -18px;
     width: 55px;
 }
+
 .hamburger::after {
     top: 15px;
     width: 56px;
 }
+
 .toggle-menu {
     position: absolute;
     cursor: pointer;
@@ -121,144 +202,672 @@ li a:hover {
     z-index: 4;
     opacity: 0;
 }
-.hamburger,  .toggle-menu {
+
+.hamburger,
+.toggle-menu {
     display: none;
 }
 
-.header-menu input:checked ~ .hamburger {
+.header-menu input:checked~.hamburger {
     border: transparent;
 }
 
-.header-menu input:checked ~ .hamburger::before {
+.header-menu input:checked~.hamburger::before {
     top: 0;
     transform: rotate(-45deg);
     width: 56px;
-} 
-.header-menu input:checked ~ .hamburger::after {
+}
+
+.header-menu input:checked~.hamburger::after {
     top: 0;
     transform: rotate(45deg);
     width: 56px;
-} 
+}
 
 /*Background for my banner- pls work*/
 .banner {
-    position: relative;
-    display: flex;
-    object-fit: cover;
-    justify-content: center;
-    overflow-x: hidden;
-    height: 100%;
-    width: 100%;
-    margin-top: -200px;
-    z-index: -1;
-}
-.main {
-    height: 1000px;
+    background-image: url(images/website_banner2.png);
+    height: 720px;
     width: auto;
-}
-/*somethings afoot in this footer*/
-.footer {
-    grid-template-areas: 
-    'footer' 'footer' 'footer';
     display: flex;
-    height: 400px;
-    width: 100%;
-    background: #5a5a69;
-    padding: 20px;
-    font-size: 35px;
-    letter-spacing: 1rem;
+    margin-top: -200px;
+    align-items: center;
+    justify-content: center;
 }
-.footer-left {
+
+.banner-text {
+    text-align: center;
+    line-height: -1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 30px;
 }
-.logo3 {
-    height: 60%;
+
+/*TIme for the MAIN course*/
+
+/*So many cards in the MAIN, let's duel */
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.cardcontainer {
+    margin: 40px 20px 0px 20px;
+    height: 466px;
+    width: 700px;
+}
+
+.cardcontainer:hover>.card {
+    transform: rotateY(180deg);
+}
+
+@media (hover: hover) {
+    .cardcontainer:hover>.card {
+        transform: rotateY(180deg);
+    }
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: 1200ms;
+    transform-style: preserve-3d;
+    flex-wrap: wrap;
+}
+
+.front,
+.back,
+.front2,
+.back2,
+.front3,
+.back3,
+.front4,
+.back4 {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 2px #1c1c29ab;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-image: url(images/exam_card1.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 30px;
+    line-height: 2;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+}
+
+.front2 {
+    background-image: url(images/exam_card2.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 30px;
+    line-height: 2;
+    text-decoration: underline
+}
+
+.front3 {
+    background-image: url(images/exam_card4.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 30px;
+    line-height: 2;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+}
+
+.front4 {
+    background-image: url(images/exam_card3.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 30px;
+    line-height: 2;
+    text-decoration: underline
+}
+
+.back {
+    background: linear-gradient(45deg, #5454B2, #EEEEF3);
+    transform: rotateY(180deg);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.back2 {
+    background: linear-gradient(-45deg, #4D84D8, #EEEEF3);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back3 {
+    background: linear-gradient(45deg, #4D84D8, #EEEEF3);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back4 {
+    background: linear-gradient(-45deg,#5454B2, #EEEEF3);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-button {
+    display: flex;
+    background: #EEEEF3;
+    color: #5a5a69;
+    height: 4rem;
+    width: 8rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.card-button:hover {
+    height: 5rem;
+    width: 9rem;
+    font-size: 20px;
+}
+
+.program-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+/*All me PROGRAMS in MAIN */
+.programs {
+    position: relative;
+    display: flex;
+    max-width: 100px;
+    height: auto;
+    margin: 30px;
+    margin-top: -2px;
+}
+
+
+/*Stuff for the About me page */
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    text-align: left;
+    margin: 60px;
+    background: #5a5a69;
+    border-radius: 1rem;
+
+}
+
+.profile-pic {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 50%;
+    padding: 100px;
+    height: auto;
+    border-radius: 110px;
+}
+
+.profile-text {
+    max-width: 35%;
+    flex-direction: column;
+    line-height: 2;
+    padding-left: 30px;
+}
+
+.phone-text {
+    display: none;
+}
+
+.desktop-text {
+    display: block;
+}
+
+
+/* WORK in progress- aka the My Works page*/
+
+.content {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+
+.content2 {
+    padding: 10px;
+    display: block;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+
+
+video,
+iframe {
+    max-width: 40%;
+    height: auto;
+    padding: 3rem;
+    align-items: flex-start;
+}
+
+iframe {
+    padding-top: 50px;
+}
+
+.works {
+    display: flex;
+    padding: 3rem;
+    height: 45rem;
+    width: auto;
+}
+
+.partial-border .content {
+    padding: 10px;
+}
+
+.partial-border {
+    border-inline-start: 5px solid;
+    border-block-start: 5px solid;
+    padding: 10px;
+    margin: 30px;
+    border-image-source: linear-gradient(#5a5a69 10%, transparent 60%);
+    border-image-slice: 1;
+}
+
+
+.poro {
+    padding: 10px;
+    display: inline-block;
+    justify-content: center;
+    margin-bottom: 8rem;
+    margin-top: 30px;
+    width: 600px;
+    height: 600px;
+    background: url(images/poro-01-02-01-01.png) 0 0 no-repeat;
+    animation: play 8s steps(26) infinite;
+}
+
+@keyframes play {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -15600px;
+    }
+}
+.button2 {
+    background: #F94547;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 18px;
+    border-radius: 9999px;
+    height: 4rem;
+    width: 12rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button2:hover {
+    height: 5rem;
+    width: 13rem;
+}
+
+/*somethings afoot in this FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background: #5a5a69;
+    height: 400px;
+    width: 100%;
+    padding-top: 80px;
+}
+
+
+.footer {
+    padding: 20px;
+    padding-left: 100px;
+    margin-right: 100px;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1rem;
+}
+
+.footer-text {
+    width: 300px;
+    margin: 10px 20px 10px 20px;
+}
+
+.logo3 {
+    height: 60%;
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.socials {
+    max-width: 20%;
+    height: auto;
+    margin-top: -20px;
+}
+
 /* MEDIA STUFF LET'S FCKING GOOO!!/*/
+@media only screen and (max-width:1680px) {
+    .card-section {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.main-headline {
+    margin-bottom: 10px;
+}
+
+.main-headline2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 @media only screen and (max-width:1220px) {
+
     .menu li a {
         font-size: 25px;
     }
+
     .logo a img {
-        width: 150px;}
-    
+        width: 150px;
+    }
+
+    .cardcontainer {
+        height: max-content;
+        max-width: 100%;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+
+    .card {
+        height: 466px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .profile-text {
+        max-width: 80%;
+        padding-bottom: 40px;
+        padding-left: 0;
+    }
+
+    .profile-pic {
+        padding: 20px;
+        padding-top: 50px;
+    }
+
+    .phone-text {
+        display: block;
+    }
+
+    .desktop-text {
+        display: none;
+    }
+
+    .headline3 {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .video {
+        max-width: 100%;
+        padding: 30px;
+    }
+    .works {
+        max-width: 100%;
+        padding: 30px;
+    }
+    .iframe { 
+        max-width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+    .poro {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width:980px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
 
     /*Hamburger menu lalala, I'm hungry */
-    .hamburger, .toggle-menu {
+    .hamburger,
+    .toggle-menu {
         display: block;
         margin-top: 20px;
         left: 310px;
     }
-    .header-menu input:checked ~ .hamburger {
-        background:#5a5a69; 
+
+    .header-menu input:checked~.hamburger {
+        background: #5a5a69;
     }
+
     .menu {
         justify-content: start;
         flex-direction: column;
         border: none;
     }
+
     .logo a img {
         display: none;
     }
+
     .logo2 {
-        position: relative;
         justify-content: center;
-        display: flex;
-        height: 150px;
-        width: auto;
-        z-index: 3;
+        height: 100px;
+        width: 200px;
     }
 
-    .logo3 {
-        height: 40%;
-        justify-content: center;
-        position: fixed;
-    }
-    .footer-h1  {
-        font-size: 20px;
-    }
     .header-menu {
         align-items: start;
         width: 70rem;
+        height: 3rem;
         flex-direction: column;
         padding-top: 20px;
-        left: -300px; 
+        left: -300px;
     }
-    .header-menu input:checked ~ .navigation{
+
+    .header-menu input:checked~.navigation {
         transform: translateX(300px);
     }
+
     .menu li a {
-        background:#5a5a69; 
+        background: #5a5a69;
         width: 200px;
         padding: 20px;
         font-size: 24px;
     }
+
     #home {
         padding-top: 70px;
     }
+
     .navigation {
-        background:#5a5a69; 
+        background: #5a5a69;
         width: 240px;
         margin-left: -70px;
         margin-top: -20px;
         padding-top: 20px;
         transition: 0.3s;
     }
+
     .banner {
-        margin-top: -350px;
         width: auto;
-        height: 400px;
+        height: 720px;
+        flex-direction: column;
         justify-content: center;
+        line-height: 1;
+        background-position: center;
+        padding-top: 100px;
+    }
+
+    .banner-text {
+        height: 100px;
+        width: auto;
+        line-height: 2;
+        padding-right: 20px;
+        margin-bottom: 60px;
+    }
+
+    .button {
+        font-size: 14px;
+        margin-left: 28%;
+        width: 10rem;
+        padding: 10px;
+        padding-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2rem;
+        padding-top: 40px;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .logo a img {
+        display: none;
+    }
+
+    .logo2 {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 200px;
+        padding-bottom: 40px;
+        width: auto;
+    }
+
+    /*MAIN course of action*/
+
+    .card-section {
+        flex-wrap: wrap;
+    }
+
+    .cardcontainer {
+        height: max-content;
+        max-width: 100%;
+        margin-top: -40px;
+    }
+
+    .card {
+        height: 466px;
+        max-width: 100%;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .front2 {
+        background-position: 90%;
+    }
+
+    .front3 {
+        background-position: 95%;
+    }
+
+    .card-text {
+        display: none;
+    }
+
+    main {
+        overflow: hidden;
+    }
+
+    .main-headline2 {
+        margin-top: -200px;
+    }
+
+
+    /*About me*/
+    .profile-text {
+        flex-direction: column;
+    }
+
+    /* Everything FOOTER related */
+    .logo3 {
+        height: 100px;
+        justify-content: center;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        width: 500px;
+        height: auto;
+    }
+
+    .footer-h1 {
+        font-size: 20px;
+    }
+
+    .footer-text {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        flex-direction: column;
     }
 }
-    
