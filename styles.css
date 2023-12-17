@@ -43,7 +43,7 @@ a {
 }
 
 .headline3 {
-    padding-bottom: 20px;
+ 
     display: block;
 
 }
@@ -71,7 +71,6 @@ h2 {
     padding-top: 18px;
     margin-left: 36%;
     cursor: pointer;
-    z-index: 1;
     transition: 0.3s ease-in-out; }
 
 .button:hover {
@@ -235,7 +234,6 @@ li a:hover {
 
 .banner-text {
     text-align: center;
-    line-height: -1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -464,6 +462,7 @@ main {
     display: flex;
     justify-content: center;
     margin-bottom: 8rem;
+    max-height: fit-content;
 }
 
 .content2 {
@@ -471,26 +470,35 @@ main {
     display: block;
     justify-content: center;
     margin-bottom: 8rem;
+    max-height: max-content;
 }
 
 
 video,
 iframe {
-    max-width: 20%;
+    max-width: 40%;
     height: auto;
     padding: 3rem;
     align-items: flex-start;
+    border: none;
 }
 
 iframe {
     padding-top: 50px;
 }
 
-.works {
-    display: flex;
-    padding: 3rem;
-    height: 45rem;
-    width: auto;
+.emotes {
+    padding: 50px;
+    max-width: max-content;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-out;
+    animation-play-state: paused;
+
+}
+
+.emotes:hover {
+    animation-play-state: running;
 }
 
 .partial-border .content {
@@ -517,6 +525,10 @@ iframe {
     height: 600px;
     background: url(images/poro-01-02-01-01.png) 0 0 no-repeat;
     animation: play 8s steps(26) infinite;
+    animation-play-state: paused;
+}
+.poro:hover {
+    animation-play-state: running;
 }
 
 @keyframes play {
@@ -675,20 +687,16 @@ footer {
     }
 
     /* WORKS site*/
-    .works {
-        max-width: 100%;
-        padding: 30px;
-    }
     video,
     iframe {
-    max-width: auto;
-    height: auto;
+    max-width: 100%;
+    height: 100%;
     padding: 3rem;
     align-items: flex-start;
 }
     .poro {
         max-width: 100%;
-        height: auto;
+        max-height: 100%;
     }
     
     .button2 {
@@ -862,9 +870,20 @@ footer {
     }
 
     /* WORK AREA*/
+
     .poro {
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .emotes {
+        justify-content: center;
+        padding: 20px;
         max-width: 100%;
         height: auto;
+        display: flex;
+    
     }
     .button2 {
         align-items: center;
