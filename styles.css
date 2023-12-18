@@ -57,8 +57,8 @@ h2 {
 
 .button {
     display: inline-block;
-    background: #F94547;
-    font-weight: 300;
+    background: #eb4143;
+    text-shadow: 1px 1px #8b2222;
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
@@ -296,7 +296,7 @@ main {
     height: 100%;
     width: 100%;
     border-radius: 1rem;
-    box-shadow: 0 0 10px 2px #1c1c29ab;
+    box-shadow: 2px 2px 10px 2px #1c1c29ab;
     position: absolute;
     backface-visibility: hidden;
 }
@@ -492,14 +492,8 @@ iframe {
     max-width: max-content;
     height: auto;
     display: block;
-    transition: transform 0.5s ease-out;
-    animation-play-state: paused;
-
 }
 
-.emotes:hover {
-    animation-play-state: running;
-}
 
 .partial-border .content {
     padding: 10px;
@@ -542,8 +536,8 @@ iframe {
 }
 .button2 {
     background: #F94547;
-    font-weight: 300;
     display: flex;
+    text-shadow: 1px 1px #8b2222;
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
@@ -560,8 +554,8 @@ iframe {
 }
 .button3 {
     background: #F94547;
-    font-weight: 300;
     display: flex;
+    text-shadow: 1px 1px #8b2222;
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
@@ -651,7 +645,9 @@ footer {
         margin-bottom: 100px;
         margin-top: 100px;
     }
-
+ .front-text {
+    margin-bottom: 50px;
+ }
     .card {
         height: 466px;
         max-width: 100%;
@@ -834,7 +830,9 @@ footer {
     .card-section {
         flex-wrap: wrap;
     }
-
+    .emotes {
+        max-width: 100%;
+    }
     .cardcontainer {
         height: max-content;
         align-items: center;
@@ -872,6 +870,7 @@ footer {
     /* WORK AREA*/
 
     .poro {
+        padding: 50px;
         display: flex;
         max-width: 100%;
         max-height: 100%;
